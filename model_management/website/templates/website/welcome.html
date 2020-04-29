@@ -1,0 +1,30 @@
+<! DOCTYPE html>
+<!--This just a template file. It becomes an HTML file
+  only after Django fills in the missing values-->
+
+<head>
+  <meta charset="UTF-8">
+  <title> Welcome! </title>
+</head>
+
+<body>
+  <h1>
+    Welcome to Influengels
+  </h1>
+
+  <p>
+    This is the demo.
+  </p>
+
+  <h2> Models </h2>
+
+  <ul>
+    {% for model in fashion_models%}
+    <li>
+      <a href="fashionmodel/{{model.id}}">
+        {{model.name}}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</body>

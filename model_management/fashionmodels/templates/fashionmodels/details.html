@@ -1,0 +1,25 @@
+<! DOCTYPE html>
+<!--This just a template file. It becomes an HTML file
+  only after Django fills in the missing values-->
+
+<head>
+  <meta charset="UTF-8">
+  <title> Welcome! </title>
+</head>
+
+<body>
+  <h1>
+    Welcome to Influengels
+  </h1>
+
+  <p>
+    <!--Using template variable-->
+    This is {{fashion_model.name}}.
+  </p>
+
+    <p>
+    <!--Using template variable-->
+    <img src="{{fashion_model.display_image.url}}"
+  </p>
+
+</body>

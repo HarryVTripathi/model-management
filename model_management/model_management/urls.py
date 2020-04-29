@@ -24,9 +24,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', welcome),
+    path('', welcome, name="welcome"),
     path('about/', about),
-    path('fashionmodel/<str:id>', get_details)
+    path('fashionmodel/<str:id>', get_details, name="detailPath")
 ]
 
 urlpatterns += staticfiles_urlpatterns()

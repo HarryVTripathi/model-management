@@ -21,9 +21,21 @@
   <ul>
     {% for model in fashion_models%}
     <li>
-      <a href="fashionmodel/{{model.id}}">
+      <!--
+        This is tight coupling and bad practice to use. If URL.py
+        changes, the template breaks.
+
+        <a href="fashionmodel/{{model.id}}">
+          {{model.name}}
+        </a>
+
+        Use url template tag instead
+      -->
+
+      <a href="{% url 'detailPath' model.id %}">
         {{model.name}}
       </a>
+
     </li>
     {% endfor %}
   </ul>

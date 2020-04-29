@@ -14,12 +14,20 @@
 
   <p>
     <!--Using template variable-->
+    <a href="{% url 'welcome' %}">Home</a> <br>
     This is {{fashion_model.name}}.
+    She is {{height}} tall and has a 
+    gorgeous figure: 
+    {{fashion_model.bust }} B, 
+    {{fashion_model.waist }} W, 
+    {{fashion_model.hip }} H, 
   </p>
 
-    <p>
+  <p>
     <!--Using template variable-->
     <img src="{{fashion_model.display_image.url}}"
+
+    <a href="{% url 'welcome' %}">Home</a>
   </p>
 
 </body>

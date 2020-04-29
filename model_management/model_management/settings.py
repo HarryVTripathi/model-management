@@ -14,7 +14,10 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# C:\Users\Harry\Documents\Django\model-management\model_management
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'fashionmodels')
+MEDIA_URL = '/fashionmodels/'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -38,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'website'
+    'website',
+    'fashionmodels'
 ]
 
 MIDDLEWARE = [
@@ -78,7 +82,7 @@ WSGI_APPLICATION = 'model_management.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'models_info',
+        'NAME': 'ModelManagement',
         'USER': 'root',
         'PASSWORD': 'tiger',
         'HOST': 'localhost',

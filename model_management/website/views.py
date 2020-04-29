@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from fashionmodels.models import FashionModel
 
 # Create your views here. This is where
 # we have to write the actual code for
@@ -21,7 +22,15 @@ def welcome(request):
   response = {
     "data": "Welcome to Zigler Model Portfolio Management"
   }
-  return HttpResponse(response['data'])
+
+  # Every time django receives a request for this page,
+  # view-function will pass this dictionary to the template
+  # variable. Dynamic template.
+  return render(request, "website/welcome.html", 
+  {
+    "mesqsage": "This data was sent from the template",
+    "fashion_models": FashionModel.objects.all()
+  }) 
 
 def about(request):
   text = ''
